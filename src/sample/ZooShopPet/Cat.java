@@ -70,8 +70,8 @@ public class Cat extends ZooShopPet {
 
     @Override
     public String getName() {
-        super.getName();
-        return null;
+
+        return super.getName();
     }
 
     @Override

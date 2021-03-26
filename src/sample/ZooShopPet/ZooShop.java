@@ -15,6 +15,11 @@ public class ZooShop {
     public ZooShop() {
         this.animals = animals;
     }
+
+    public Object last(){ ;
+        return animals.indexOf(last());
+    }
+
     public void  addAnimal(ZooShopPet zooShopPet){
         animals.add(zooShopPet);
 

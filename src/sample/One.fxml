@@ -4,15 +4,22 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet fullStructureCSS.css?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="fullStructureCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OneController">
    <children>
-      <ImageView fx:id="imOne" fitHeight="281.0" fitWidth="315.0" layoutX="199.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imTwo" fitHeight="281.0" fitWidth="315.0" layoutX="199.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" />
       <Label prefHeight="61.0" prefWidth="150.0" text="My name" textFill="#4d4d4f">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtNameOne" layoutX="14.0" layoutY="72.0" prefHeight="52.0" prefWidth="149.0" />
+      <Label fx:id="lblNameOne" layoutX="47.0" layoutY="76.0" prefHeight="61.0" prefWidth="144.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnLoad" layoutX="67.0" layoutY="311.0" mnemonicParsing="false" onAction="#loadLast" text="Load" />
+      <TextField fx:id="txtOne" layoutX="14.0" layoutY="175.0" />
    </children>
 </AnchorPane>

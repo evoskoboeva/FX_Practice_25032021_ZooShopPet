@@ -19,8 +19,10 @@ import java.io.File;
 import java.time.LocalDate;
 
 
+
 public class MainController {
 
+    public  Image image;
     @FXML
     TextArea txtReport;
     @FXML
@@ -48,50 +50,45 @@ public class MainController {
     TextField txtWWWcat;
     @FXML
     TextField txtWWWdog;
+
     public static Stage InfoStage = new Stage();
     public String WWWOne="";
-    @FXML
-    ImageView imOne;
+
     @FXML
     TextField txtNameOne;
+    @FXML
 
-
-
-
-
-
+    ImageView imOne;
 
     Cat cat = new Cat("Kot", LocalDate.of(2011,02,15),100,
-            LocalDate.of(2021, 03, 12), "long","www");
+            LocalDate.of(2021, 03, 12), "long","sample/AnimalsFoto/cat1.jpg");
     Dog dog = new Dog(200,LocalDate.of(2015, 05, 05), "Pes",
             LocalDate.of(2021, 03, 13),"www2",70);
     ZooShop zooShop = new ZooShop();
 
      double price;
      LocalDate DateBirthday;
-     public String name;
      LocalDate DatePurchase;
 
     public String getWww() {
         return www;
     }
-
-    String www;
+    public String name;
+     String www;
      String typeFur;
      private int size;
      LocalDate DateTemp = null;
 
     public void showReport(ActionEvent actionEvent) {
 
-        /*zooShop.addAnimal(cat);
+        zooShop.addAnimal(cat);
         zooShop.addAnimal(dog);
-        */
         txtReport.setText("");
         txtReport.setText(zooShop.toString());
     }
 
     public void CreateDog(ActionEvent actionEvent) {
-    name= txtNameDog.getText();
+    name = txtNameDog.getText();
     DateBirthday = dpBithdayDog.getValue();
     size = Integer.parseInt(txtSize.getText());
     DatePurchase = dpPurchaseDog.getValue();
@@ -111,7 +108,9 @@ public class MainController {
 
 
     }
-
+    public Object LastAnimal(){
+        return zooShop.last();
+    }
     public void CreateCat(ActionEvent actionEvent) {
         name= txtNameCat.getText();
         DateBirthday = dpBithdayCat.getValue();
@@ -142,12 +141,11 @@ public class MainController {
         alert.setContentText(file.getAbsolutePath());
         //alert.showAndWait();
         alert.show();
-
         www = file.getAbsolutePath();
+        image = new Image(file.toURI().toString());
+        imOne.setImage(image);
         txtWWWcat.setText(www);
         txtNameOne.setText(name);
-        Image image = new Image(file.toURI().toString());
-        imOne.setImage(image);
 
 
 
@@ -167,10 +165,13 @@ public class MainController {
         //alert.showAndWait();
         alert.show();
         www = file.getAbsolutePath();
+        image = new Image(file.toURI().toString());
+        imOne.setImage(image);
                txtWWWdog.setText(www);
                txtNameOne.setText(name);
-        Image image = new Image(file.toURI().toString());
-        imOne.setImage(image);}
+
+
+    }
 
         public void ShowLast(ActionEvent actionEvent) {
             Parent mainForm = null;
@@ -190,7 +191,7 @@ public class MainController {
 
 
 
-    }
+}
 
 
 

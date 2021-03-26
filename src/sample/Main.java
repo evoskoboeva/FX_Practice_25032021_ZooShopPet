@@ -20,7 +20,9 @@ import sample.ZooShopPet.ZooShop;
 
 import java.time.LocalDate;
 
+
 public class Main extends Application {
+
 
 
     @Override
@@ -30,7 +32,7 @@ public class Main extends Application {
 
         primaryStage.setTitle("ZooShopPet-Cat");
         primaryStage.getIcons().add(new Image("sample/ikon.jpg"));
-        primaryStage.setScene(new Scene(root,800,500));
+        primaryStage.setScene(new Scene(root,800,700));
         primaryStage.show();
     }
 
