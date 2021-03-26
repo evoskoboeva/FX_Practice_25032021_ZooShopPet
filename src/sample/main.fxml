@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet fullStructureCSS.css?>
+
+<GridPane alignment="center" hgap="10" prefWidth="430.0" stylesheets="fullStructureCSS.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+   <children>
+      <VBox prefHeight="124.0" prefWidth="199.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <HBox alignment="TOP_CENTER" />
+            <ImageView fitHeight="46.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sample/ikon.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Button mnemonicParsing="false" onAction="#showReport" prefHeight="25.0" prefWidth="199.0" text="Report" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Button fx:id="btnCreateCat" mnemonicParsing="false" onAction="#CreateCat" prefHeight="25.0" prefWidth="92.0" text="AddCat" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <ImageView fitHeight="46.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <image>
+            <Image url="@ikonDog.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnCreateDog" mnemonicParsing="false" onAction="#CreateDog" prefHeight="25.0" prefWidth="95.0" text="AddDog" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <TextArea fx:id="txtReport" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="7" GridPane.rowSpan="4">
+         <font>
+            <Font size="10.0" />
+         </font></TextArea>
+      <DatePicker fx:id="dpBithdayCat" promptText="birthday" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <TextField fx:id="txtNameCat" promptText="name" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <TextField fx:id="txtNameDog" layoutX="120.0" layoutY="13.0" promptText="name" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <TextField fx:id="txtTypeFur" layoutX="230.0" layoutY="13.0" promptText="typeFur" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <TextField fx:id="txtPriceCat" layoutX="340.0" layoutY="13.0" promptText="price" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <TextField fx:id="txtWWWcat" layoutX="230.0" layoutY="53.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <DatePicker fx:id="dpBithdayDog" layoutX="230.0" layoutY="13.0" promptText="birthday" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <TextField fx:id="txtSize" layoutX="230.0" layoutY="53.0" promptText="size" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <TextField fx:id="txtPriceDog" layoutX="340.0" layoutY="133.0" promptText="price" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <TextField fx:id="txtWWWdog" layoutX="230.0" layoutY="173.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <DatePicker fx:id="dpPurchaseDog" layoutX="230.0" layoutY="133.0" promptText="Purchase" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <DatePicker fx:id="dpPurchaseCat" layoutX="230.0" layoutY="133.0" promptText="Purchase" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Button fx:id="btnChooseFoto" minWidth="67.0" mnemonicParsing="false" onAction="#ChooseFotoCat" prefHeight="45.0" prefWidth="67.0" text="Choose foto" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+      <Button layoutX="364.0" layoutY="63.0" minWidth="67.0" mnemonicParsing="false" onAction="#ChooseFotoDog" prefHeight="45.0" prefWidth="67.0" text="Choose foto" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="5" GridPane.rowSpan="2" />
+      <Button fx:id="btnCreateCat1" layoutX="43.0" layoutY="93.0" mnemonicParsing="false" onAction="#ShowLast" prefHeight="64.0" prefWidth="79.0" text="Show Last" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="9" GridPane.rowSpan="2" />
+   </children>
+
+
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints maxWidth="57.0" minWidth="10.0" prefWidth="48.0" />
+      <ColumnConstraints maxWidth="89.0" minWidth="10.0" prefWidth="78.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+</GridPane>
